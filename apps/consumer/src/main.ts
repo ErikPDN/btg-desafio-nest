@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { ConsumerModule } from './consumer.module';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
+import { ValidationPipe } from '@nestjs/common/pipes/validation.pipe';
 
 async function bootstrap() {
   const app = await NestFactory.create(ConsumerModule);
@@ -13,6 +14,14 @@ async function bootstrap() {
       queueOptions: { durable: true },
     },
   });
+
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      transform: true,
+      forbidNonWhitelisted: true,
+    }),
+  );
 
   await app.listen(process.env.port ?? 3000);
 }
