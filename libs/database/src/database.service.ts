@@ -20,8 +20,4 @@ export class DatabaseService implements OnModuleDestroy {
   async onModuleDestroy() {
     await this.pool.end();
   }
-
-  get schema() {
-    return schema;
-  }
 }
