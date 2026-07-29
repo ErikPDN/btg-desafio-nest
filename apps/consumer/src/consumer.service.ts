@@ -31,7 +31,7 @@ export class ConsumerService {
           pedidoId: novoPedido.id,
           produto: item.produto,
           quantidade: item.quantidade,
-          precoUnitario: item.precoUnitario.toString(),
+          precoUnitario: item.preco.toString(),
         })),
       );
     });

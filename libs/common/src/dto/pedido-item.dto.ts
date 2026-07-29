@@ -1,5 +1,10 @@
-import { IsInt, IsNumber, IsPositive, MinLength } from 'class-validator';
-import { IsString } from 'class-validator/types/decorator/typechecker/IsString';
+import {
+  IsInt,
+  IsNumber,
+  IsPositive,
+  IsString,
+  MinLength,
+} from 'class-validator';
 
 export class PedidoItemDto {
   @IsString({ message: 'O campo produto deve ser uma string' })
@@ -12,5 +17,5 @@ export class PedidoItemDto {
 
   @IsNumber({}, { message: 'O campo preco deve ser um número' })
   @IsPositive({ message: 'O campo preco deve ser um número positivo' })
-  precoUnitario!: number;
+  preco!: number;
 }

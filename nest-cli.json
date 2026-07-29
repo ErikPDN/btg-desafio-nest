@@ -45,24 +45,6 @@
       "compilerOptions": {
         "tsConfigPath": "libs/database/tsconfig.lib.json"
       }
-    },
-    "databse": {
-      "type": "library",
-      "root": "libs/databse",
-      "entryFile": "index",
-      "sourceRoot": "libs/databse/src",
-      "compilerOptions": {
-        "tsConfigPath": "libs/databse/tsconfig.lib.json"
-      }
-    },
-    "shared": {
-      "type": "library",
-      "root": "libs/shared",
-      "entryFile": "index",
-      "sourceRoot": "libs/shared/src",
-      "compilerOptions": {
-        "tsConfigPath": "libs/shared/tsconfig.lib.json"
-      }
     }
   }
 }
